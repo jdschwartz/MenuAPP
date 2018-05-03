@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/SubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:text="Subway Menu"
+        android:textSize="30sp" />
+
+    <GridLayout
+        android:id="@+id/MasterLayoutSub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/BottomButtonSub"
+        android:layout_below="@+id/SubTitle"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <LinearLayout
+            android:id="@+id/breadtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Bread type"
+                android:textSize="25sp" />
+
+            <Spinner
+                android:id="@+id/breadspinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sizeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Size"
+                android:textSize="25sp" />
+
+            <Spinner
+                android:id="@+id/sizespinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/MeatList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meat"
+                android:layout_gravity="left"
+                android:textSize="25sp"/>
+
+            <CheckBox
+                android:id="@+id/Turkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turkey"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Ham"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ham"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Chicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chicken"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/ChickenStrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chicken Strips"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/SauceList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sauces"
+                android:layout_gravity="left"
+                android:textSize="25sp"/>
+
+            <CheckBox
+                android:id="@+id/Mustard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mustard"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Mayo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mayo"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Italian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Italian"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/BBQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BBQ"
+                android:onClick="onCheckboxClicked"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CheeseList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cheese"
+                android:layout_gravity="left"
+                android:textSize="25sp"/>
+
+            <CheckBox
+                android:id="@+id/American"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="American"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Swiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Swiss"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/PepperJack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PepperJack"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Mozzarella"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mozzarella"
+                android:onClick="onCheckboxClicked"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ToppingList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Topping"
+                android:layout_gravity="left"
+                android:textSize="25sp"/>
+
+            <CheckBox
+                android:id="@+id/Lettuce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lettuce"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Bacon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bacon"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Peppers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peppers"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/Onions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onions"
+                android:onClick="onCheckboxClicked"/>
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/BottomButtonSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <Button
+            android:layout_column="0"
+            android:id="@+id/SubRTMButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="RTMsub"
+            android:text="Main Menu"
+            android:textSize="17sp" />
+
+        <Button
+            android:layout_column="1"
+            android:id="@+id/SubATOButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Item"
+            android:textSize="17sp"
+            android:onClick="AIsub"/>
+
+        <Button
+            android:layout_column="2"
+            android:id="@+id/SubCOButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Order"
+            android:textSize="17sp"
+            android:onClick="COsub"/>
+    </GridLayout>
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/PayTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:text="Payment Menu"
+        android:textSize="30sp"/>
+
+    <GridLayout
+        android:id="@+id/Payment_Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="5"
+        android:columnCount="2"
+        android:layout_below="@id/PayTitle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:text="Restaurant:"
+            android:layout_gravity="right"
+            android:textSize="25sp"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/Restaurant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_gravity="left"
+            android:padding="5dp"
+            android:text="Subway"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:text="Name: "
+            android:layout_gravity="right"
+            android:textSize="25sp"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/Student_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_gravity="left"
+            android:padding="5dp"
+            android:text="*******"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:text="Enter ID:"
+            android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/Student_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_gravity="left"
+            android:padding="5dp"
+            android:ems="5"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="3"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:text="Enter PIN:"
+            android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/Student_PIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="3"
+            android:layout_gravity="left"
+            android:padding="5dp"
+            android:ems="5"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="4"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:text="Order Total:"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/Total_Cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="4"
+            android:layout_gravity="left"
+            android:padding="5dp"
+            android:text="****"
+            android:textSize="25sp"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tipNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Payment_Info"/>
+
+    <SeekBar
+        android:id="@+id/TipBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="30"
+        android:progress="15"
+        android:layout_below="@id/tipNum"/>
+
+
+
+    <GridLayout
+        android:id="@+id/BottomButtonSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <Button
+            android:id="@+id/CancelOrderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:text="Cancel Order"
+            android:textSize="15sp"
+            android:onClick="COPay"/>
+
+        <Button
+            android:layout_column="1"
+            android:id="@+id/ReturnToMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Item"
+            android:textSize="15sp"
+            android:onClick="RTMpay"/>
+
+        <Button
+            android:layout_column="2"
+            android:id="@+id/ConfirmPurchaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purchase"
+            android:textSize="15sp"
+            android:onClick="CPButton"/>
+    </GridLayout>
+
+</RelativeLayout>
